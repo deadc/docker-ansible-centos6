@@ -3,11 +3,11 @@ ENV container docker
 
 RUN yum -y update; yum clean all
 
-RUN yum -y install initscripts; yum clean all; rm /etc/rc.d/rc.d/
+RUN yum -y install initscripts; yum clean all
 
-RUN mv /etc/init/serial.conf /etc/init/serial.conf.disabled; \
-mv /etc/init/tty.conf /etc/init/tty.conf.disabled; \
-mv /etc/init/start-ttys.conf /etc/init/start-ttys.conf.disabled
+RUN mv /etc/init/serial.conf /etc/init/serial.conf.disabled;        \
+    mv /etc/init/tty.conf /etc/init/tty.conf.disabled;              \
+    mv /etc/init/start-ttys.conf /etc/init/start-ttys.conf.disabled
 
 RUN yum -y install epel-release
 RUN yum -y install PyYAML python-crypto python-jinja2 python-paramiko python-setuptools python-six openssl sshpass curl
