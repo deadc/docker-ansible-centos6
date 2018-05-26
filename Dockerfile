@@ -1,5 +1,4 @@
 FROM centos:6
-ENV container docker
 
 RUN yum -y update; yum clean all
 
