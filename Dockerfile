@@ -31,7 +31,7 @@ RUN mv /etc/init/serial.conf /etc/init/serial.conf.disabled;        \
     mv /etc/init/start-ttys.conf /etc/init/start-ttys.conf.disabled
 
 RUN pip install setuptools==18.5
-RUN pip install ansible
+RUN pip install ansible ansible-lint
 
 RUN curl -fsSL https://goss.rocks/install | sh
 
